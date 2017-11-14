@@ -11,8 +11,8 @@ app.use(bodyParser.urlencoded({extends:true}));
 app.use(bodyParser.json());
 
 // static paths
-app.set(express.static(path.join(__dirname, './client/dist')));
-app.set(express.static(path.join(__dirname, './static')));
+app.use(express.static(path.join(__dirname, './client/dist')));
+app.use(express.static(path.join(__dirname, './static')));
 
 // require configs
 require('./server/config/mongoose.js');
